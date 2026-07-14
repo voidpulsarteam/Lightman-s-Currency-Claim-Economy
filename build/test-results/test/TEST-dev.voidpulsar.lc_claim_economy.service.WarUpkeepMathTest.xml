@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" tests="31" skipped="0" failures="0" errors="0" timestamp="2026-07-14T00:26:25.058Z" hostname="VOIDSBLADE" time="0.031">
+<testsuite name="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" tests="31" skipped="0" failures="0" errors="0" timestamp="2026-07-14T00:35:02.367Z" hostname="VOIDSBLADE" time="0.05">
   <properties/>
   <testcase name="formatExtraTermSum_oneWar_showsOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.002"/>
-  <testcase name="ordinalTerm_infinity_cappedAtLongMax()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
+  <testcase name="ordinalTerm_infinity_cappedAtLongMax()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
   <testcase name="formatGeometricFactor_multiplierOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
-  <testcase name="ordinalTerm_zeroBase_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
+  <testcase name="ordinalTerm_zeroBase_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="sumOrdinal_threeWars_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
   <testcase name="formatExtraTermSum_twoWars_l1_2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.002"/>
   <testcase name="formatGeometricFactor_oneWar_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="ordinalTerm_negativeBase_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="geometricFactor_negativeK_returnsOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="sumOrdinal_twoWars_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
-  <testcase name="sumOrdinal_zeroWars_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
+  <testcase name="sumOrdinal_zeroWars_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="sumOrdinal_neverNegative()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.002"/>
-  <testcase name="totalUpkeepFactor_oneIncomingWar()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
-  <testcase name="formatTotalUpkeepFactor_oneIncomingWar()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
-  <testcase name="geometricFactor_twoWars_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
+  <testcase name="totalUpkeepFactor_oneIncomingWar()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
+  <testcase name="formatTotalUpkeepFactor_oneIncomingWar()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.003"/>
+  <testcase name="geometricFactor_twoWars_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="geometricFactor_zeroWars_returnsOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
-  <testcase name="formatGeometricFactor_zeroWars_returnsOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
-  <testcase name="geometricFactor_fractionalL()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
-  <testcase name="sumOrdinal_zeroBase_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
+  <testcase name="formatGeometricFactor_zeroWars_returnsOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.002"/>
+  <testcase name="geometricFactor_fractionalL()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.002"/>
+  <testcase name="sumOrdinal_zeroBase_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="geometricFactor_oneWar_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
   <testcase name="sumOrdinal_oneWar_usesMultiplierOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
-  <testcase name="ordinalTerm_neverNegative()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
-  <testcase name="ordinalTerm_secondWar_l1_5()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
-  <testcase name="sumOrdinal_overflow_cappedAtLongMax()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
-  <testcase name="geometricFactor_threeWars_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
+  <testcase name="ordinalTerm_neverNegative()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.002"/>
+  <testcase name="ordinalTerm_secondWar_l1_5()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
+  <testcase name="sumOrdinal_overflow_cappedAtLongMax()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
+  <testcase name="geometricFactor_threeWars_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="geometricFactor_multiplierOne_usesLinear()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="ordinalTerm_thirdWar_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="ordinalTerm_overflow_cappedAtLongMax()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
   <testcase name="ordinalTerm_secondWar_l2()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
-  <testcase name="ordinalTerm_negativeIndex_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.0"/>
+  <testcase name="ordinalTerm_negativeIndex_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <testcase name="ordinalTerm_firstWar_usesMultiplierOne()" classname="dev.voidpulsar.lc_claim_economy.service.WarUpkeepMathTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

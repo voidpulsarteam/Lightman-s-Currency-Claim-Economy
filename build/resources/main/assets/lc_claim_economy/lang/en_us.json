@@ -77,7 +77,7 @@
   "gui.lc_claim_economy.chunk_type_build": "Build chunk",
   "gui.lc_claim_economy.chunk_type_land": "Land chunk",
   "gui.lc_claim_economy.chunk_type_hint": "Alt + click/drag to switch build/land",
-  "gui.lc_claim_economy.chunk_user_perm.open_hint": "Ctrl + right-click: player permissions",
+  "gui.lc_claim_economy.chunk_user_perm.open_hint": "Shift + middle-click: player permissions",
   "gui.lc_claim_economy.chunk_user_perm.title": "Chunk Player Permissions",
   "gui.lc_claim_economy.chunk_user_perm.refresh": "Refresh",
   "gui.lc_claim_economy.chunk_user_perm.add_ghost": "Player name or UUID",

@@ -55,7 +55,7 @@ public class ChunkScreenPanelChunkButtonMixin {
 
     @Inject(method = "onClicked", at = @At("HEAD"), cancellable = true, remap = false)
     private void lcClaimEconomy$openUserPermsScreen(MouseButton mouseButton, CallbackInfo ci) {
-        if (!Screen.hasControlDown() || !mouseButton.isRight() || chunk == null || chunkPos == null) {
+        if (!Screen.hasShiftDown() || Screen.hasAltDown() || Screen.hasControlDown() || !mouseButton.isMiddle() || chunk == null || chunkPos == null) {
             return;
         }
         if (chunk.getClaimedDate().isEmpty()) {

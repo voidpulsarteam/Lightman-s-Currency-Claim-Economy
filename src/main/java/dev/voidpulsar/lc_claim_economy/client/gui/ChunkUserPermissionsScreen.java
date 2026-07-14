@@ -12,6 +12,7 @@ import dev.ftb.mods.ftblibrary.ui.Theme;
 import dev.ftb.mods.ftblibrary.ui.Widget;
 import dev.ftb.mods.ftblibrary.ui.input.MouseButton;
 import dev.ftb.mods.ftblibrary.ui.misc.NordColors;
+import dev.ftb.mods.ftblibrary.util.TooltipList;
 import dev.voidpulsar.lc_claim_economy.client.ClientChunkUserPermissions;
 import dev.voidpulsar.lc_claim_economy.network.ChunkUserPermissionEntry;
 import dev.voidpulsar.lc_claim_economy.network.RequestChunkUserPermsPayload;
@@ -30,7 +31,8 @@ public class ChunkUserPermissionsScreen extends BaseScreen {
     private static final int CONTENT_PAD = 8;
     private static final int SCROLLBAR_WIDTH = 8;
     private static final int ADD_ROW_HEIGHT = 20;
-    private static final int ENTRY_HEIGHT = 20;
+    private static final int ENTRY_HEIGHT = 22;
+    private static final int HEADER_ROW_HEIGHT = 18;
 
     private final BaseScreen parent;
     private final String chunkKey;
@@ -128,9 +130,17 @@ public class ChunkUserPermissionsScreen extends BaseScreen {
                 graphics,
                 Component.translatable("gui.lc_claim_economy.chunk_user_perm.title"),
                 x + w / 2,
-                y + 7,
+            y + 5,
                 NordColors.SNOW_STORM_0,
                 Theme.CENTERED
+        );
+        theme.drawString(
+            graphics,
+            Component.translatable("gui.lc_claim_economy.chunk_user_perm.chunk", chunkKey),
+            x + w / 2,
+            y + 15,
+            NordColors.SNOW_STORM_1,
+            Theme.CENTERED
         );
     }
 
@@ -172,11 +182,17 @@ public class ChunkUserPermissionsScreen extends BaseScreen {
                 return;
             }
 
+            if (!ClientChunkUserPermissions.canManage()) {
+                add(new MessageRow(this, Component.translatable("gui.lc_claim_economy.chunk_user_perm.view_only").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC)));
+            }
+
             List<ChunkUserPermissionEntry> entries = ClientChunkUserPermissions.entries();
             if (entries.isEmpty()) {
                 add(new MessageRow(this, Component.translatable("gui.lc_claim_economy.chunk_user_perm.empty").withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC)));
                 return;
             }
+
+            add(new HeaderRow(this));
 
             for (ChunkUserPermissionEntry entry : entries) {
                 add(new EntryRow(this, entry));
@@ -189,12 +205,45 @@ public class ChunkUserPermissionsScreen extends BaseScreen {
             for (Widget widget : widgets) {
                 widget.setPos(0, y);
                 widget.setWidth(width);
-                widget.setHeight(ENTRY_HEIGHT);
+                widget.setHeight(widget instanceof HeaderRow ? HEADER_ROW_HEIGHT : ENTRY_HEIGHT);
                 if (widget instanceof EntryRow row) {
                     row.alignWidgets();
                 }
-                y += ENTRY_HEIGHT + 2;
+                y += (widget instanceof HeaderRow ? HEADER_ROW_HEIGHT : ENTRY_HEIGHT) + 2;
             }
+        }
+    }
+
+    private static final class HeaderRow extends Button {
+        HeaderRow(Panel panel) {
+            super(panel, Component.empty(), Color4I.empty());
+        }
+
+        @Override
+        public void onClicked(MouseButton button) {
+        }
+
+        @Override
+        public void drawBackground(GuiGraphics graphics, Theme theme, int x, int y, int w, int h) {
+            NordColors.POLAR_NIGHT_1.draw(graphics, x, y, w, h);
+            NordColors.POLAR_NIGHT_3.draw(graphics, x, y + h - 1, w, 1);
+        }
+
+        @Override
+        public void draw(GuiGraphics graphics, Theme theme, int x, int y, int w, int h) {
+            super.draw(graphics, theme, x, y, w, h);
+            theme.drawString(graphics, Component.translatable("gui.lc_claim_economy.chunk_user_perm.player_col"), x + 6, y + 5, NordColors.SNOW_STORM_1, 0);
+
+            int colX = x + w - 90;
+            drawCol(theme, graphics, "B", colX, y);
+            drawCol(theme, graphics, "I", colX + 18, y);
+            drawCol(theme, graphics, "E", colX + 36, y);
+            drawCol(theme, graphics, "P", colX + 54, y);
+            drawCol(theme, graphics, "X", colX + 72, y);
+        }
+
+        private void drawCol(Theme theme, GuiGraphics graphics, String value, int x, int y) {
+            theme.drawString(graphics, Component.literal(value), x + 8, y + 5, NordColors.SNOW_STORM_1, Theme.CENTERED);
         }
     }
 
@@ -227,11 +276,12 @@ public class ChunkUserPermissionsScreen extends BaseScreen {
             add(new ToggleFlagButton(this, entry, ChunkPermissionFlags.BLOCK_INTERACT, "I"));
             add(new ToggleFlagButton(this, entry, ChunkPermissionFlags.ENTITY_INTERACT, "E"));
             add(new ToggleFlagButton(this, entry, ChunkPermissionFlags.PVP, "P"));
+            add(new RemovePlayerButton(this, entry));
         }
 
         @Override
         public void alignWidgets() {
-            int x = width - 72;
+            int x = width - 90;
             for (Widget widget : widgets) {
                 widget.setPosAndSize(x, 2, 16, 16);
                 x += 18;
@@ -241,7 +291,8 @@ public class ChunkUserPermissionsScreen extends BaseScreen {
         @Override
         public void drawBackground(GuiGraphics graphics, Theme theme, int x, int y, int w, int h) {
             NordColors.POLAR_NIGHT_2.withAlpha(isMouseOver() ? 220 : 180).draw(graphics, x, y, w, h);
-            theme.drawString(graphics, Component.literal(entry.displayName()), x + 6, y + 6, NordColors.SNOW_STORM_0, 0);
+            theme.drawString(graphics, Component.literal(entry.displayName()), x + 6, y + 4, NordColors.SNOW_STORM_0, 0);
+            theme.drawString(graphics, Component.literal(entry.playerId().toString()), x + 6, y + 13, NordColors.SNOW_STORM_1.withAlpha(180), 0);
         }
     }
 
@@ -285,6 +336,55 @@ public class ChunkUserPermissionsScreen extends BaseScreen {
         public void draw(GuiGraphics graphics, Theme theme, int x, int y, int w, int h) {
             super.draw(graphics, theme, x, y, w, h);
             theme.drawString(graphics, getTitle(), x + w / 2, y + 5, NordColors.SNOW_STORM_0, Theme.CENTERED);
+        }
+
+        @Override
+        public void addMouseOverText(TooltipList list) {
+            String key = switch (flag) {
+                case ChunkPermissionFlags.BLOCK_EDIT -> "gui.lc_claim_economy.chunk_user_perm.flag_block_edit";
+                case ChunkPermissionFlags.BLOCK_INTERACT -> "gui.lc_claim_economy.chunk_user_perm.flag_block_interact";
+                case ChunkPermissionFlags.ENTITY_INTERACT -> "gui.lc_claim_economy.chunk_user_perm.flag_entity_interact";
+                case ChunkPermissionFlags.PVP -> "gui.lc_claim_economy.chunk_user_perm.flag_pvp";
+                default -> "";
+            };
+            if (!key.isEmpty()) {
+                list.add(Component.translatable(key));
+            }
+        }
+    }
+
+    private static final class RemovePlayerButton extends Button {
+        private final ChunkUserPermissionEntry entry;
+
+        RemovePlayerButton(Panel panel, ChunkUserPermissionEntry entry) {
+            super(panel, Component.literal("X"), Color4I.empty());
+            this.entry = entry;
+        }
+
+        @Override
+        public void onClicked(MouseButton button) {
+            ChunkUserPermissionsScreen screen = (ChunkUserPermissionsScreen) getGui();
+            if (!ClientChunkUserPermissions.canManage()) {
+                return;
+            }
+            PacketDistributor.sendToServer(new SetChunkUserPermsPayload(screen.chunkKey, entry.playerId().toString(), 0));
+        }
+
+        @Override
+        public void drawBackground(GuiGraphics graphics, Theme theme, int x, int y, int w, int h) {
+            NordColors.RED.withAlpha(isMouseOver() ? 210 : 150).draw(graphics, x, y, w, h);
+            NordColors.POLAR_NIGHT_3.draw(graphics, x, y + h - 1, w, 1);
+        }
+
+        @Override
+        public void draw(GuiGraphics graphics, Theme theme, int x, int y, int w, int h) {
+            super.draw(graphics, theme, x, y, w, h);
+            theme.drawString(graphics, getTitle(), x + w / 2, y + 5, NordColors.SNOW_STORM_0, Theme.CENTERED);
+        }
+
+        @Override
+        public void addMouseOverText(TooltipList list) {
+            list.add(Component.translatable("gui.lc_claim_economy.chunk_user_perm.remove_player"));
         }
     }
 }

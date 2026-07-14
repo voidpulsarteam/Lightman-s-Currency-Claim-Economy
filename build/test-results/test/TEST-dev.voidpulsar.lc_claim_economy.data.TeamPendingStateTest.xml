@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-07-14T00:26:24.937Z" hostname="VOIDSBLADE" time="0.033">
+<testsuite name="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-07-14T00:35:02.212Z" hostname="VOIDSBLADE" time="0.038">
   <properties/>
-  <testcase name="withPendingForceUnload_removesFromForceLoads()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.015"/>
+  <testcase name="withPendingForceUnload_removesFromForceLoads()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.017"/>
   <testcase name="pendingProperties_returnsUnmodifiableView()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.002"/>
-  <testcase name="afterAddingWarDeclare_notEmpty()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="withPendingWarDeclare_removesFromWarEnds()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
+  <testcase name="afterAddingWarDeclare_notEmpty()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="withPendingWarDeclare_removesFromWarEnds()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
   <testcase name="withPendingBuildChunk_removesFromLandPending()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
   <testcase name="freshState_isEmpty()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
-  <testcase name="withPendingProperty_thenWithout_isEmpty()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
-  <testcase name="multipleChunks_dontInterfere()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="withPendingForceLoad_removesFromForceUnloads()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="afterAddingAndRemovingWarDeclare_isEmpty()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="withoutWarReferences_removesBothDeclareAndEnd()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="pendingWarDeclares_returnsUnmodifiableView()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="withPendingWarEnd_removesFromWarDeclares()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="withoutPendingProperty_noOpWhenAbsent()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
-  <testcase name="withoutWarReferences_noOpWhenAbsent()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
-  <testcase name="cleared_returnsEmptyState()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
+  <testcase name="withPendingProperty_thenWithout_isEmpty()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
+  <testcase name="multipleChunks_dontInterfere()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="withPendingForceLoad_removesFromForceUnloads()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="afterAddingAndRemovingWarDeclare_isEmpty()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="withoutWarReferences_removesBothDeclareAndEnd()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="pendingWarDeclares_returnsUnmodifiableView()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="withPendingWarEnd_removesFromWarDeclares()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="withoutPendingProperty_noOpWhenAbsent()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.002"/>
+  <testcase name="withoutWarReferences_noOpWhenAbsent()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="cleared_returnsEmptyState()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
   <testcase name="copy_isIndependentOfOriginal()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
-  <testcase name="withPendingLandChunk_removesFromBuildPending()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.001"/>
+  <testcase name="withPendingLandChunk_removesFromBuildPending()" classname="dev.voidpulsar.lc_claim_economy.data.TeamPendingStateTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
