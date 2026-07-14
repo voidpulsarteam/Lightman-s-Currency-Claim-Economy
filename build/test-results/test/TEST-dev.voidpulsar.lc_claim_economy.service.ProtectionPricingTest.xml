@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-07-14T23:42:01.290Z" hostname="VOIDSBLADE" time="0.176">
+<testsuite name="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-07-14T23:57:10.868Z" hostname="VOIDSBLADE" time="0.095">
   <properties/>
-  <testcase name="landChunkUnits_groupSizeZeroTreatedAsOne()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.003"/>
-  <testcase name="landChunkUnits_alwaysRoundUp()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.008"/>
-  <testcase name="landChunkUnits_groupSizeOne_equalsChunkCount()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.006"/>
+  <testcase name="landChunkUnits_groupSizeZeroTreatedAsOne()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
+  <testcase name="landChunkUnits_alwaysRoundUp()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.004"/>
+  <testcase name="landChunkUnits_groupSizeOne_equalsChunkCount()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.002"/>
   <testcase name="landChunkUnits_negativeChunks_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
-  <testcase name="landChunkUnits_zeroChunks_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
-  <testcase name="1 chunks / group 5 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.04"/>
+  <testcase name="landChunkUnits_zeroChunks_returnsZero()" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.0"/>
+  <testcase name="1 chunks / group 5 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.026"/>
   <testcase name="4 chunks / group 5 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
   <testcase name="5 chunks / group 5 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
   <testcase name="6 chunks / group 5 =&gt; 2 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
-  <testcase name="10 chunks / group 5 =&gt; 2 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.002"/>
-  <testcase name="11 chunks / group 5 =&gt; 3 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.0"/>
-  <testcase name="25 chunks / group 5 =&gt; 5 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.002"/>
-  <testcase name="1 chunks / group 1 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.002"/>
-  <testcase name="5 chunks / group 1 =&gt; 5 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.002"/>
-  <testcase name="1 chunks / group 10 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
-  <testcase name="10 chunks / group 10 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
-  <testcase name="11 chunks / group 10 =&gt; 2 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
+  <testcase name="10 chunks / group 5 =&gt; 2 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.0"/>
+  <testcase name="11 chunks / group 5 =&gt; 3 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
+  <testcase name="25 chunks / group 5 =&gt; 5 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
+  <testcase name="1 chunks / group 1 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
+  <testcase name="5 chunks / group 1 =&gt; 5 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.001"/>
+  <testcase name="1 chunks / group 10 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.0"/>
+  <testcase name="10 chunks / group 10 =&gt; 1 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.0"/>
+  <testcase name="11 chunks / group 10 =&gt; 2 units" classname="dev.voidpulsar.lc_claim_economy.service.ProtectionPricingTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
