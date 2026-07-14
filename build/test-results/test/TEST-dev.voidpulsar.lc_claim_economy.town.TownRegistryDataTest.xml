@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-07-14T23:42:01.547Z" hostname="VOIDSBLADE" time="0.023">
+  <properties/>
+  <testcase name="treasury_balance_canIncrease_andDecrease()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.006"/>
+  <testcase name="claimAndUnclaimPlot_tracksOwnership()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.001"/>
+  <testcase name="treasuryPermissions_followRankRules()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.001"/>
+  <testcase name="nativeTownAccess_allowsResidents_andKeepsOutsidersOutByDefault()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.002"/>
+  <testcase name="plotTrust_allowsOutsiderOnSingleClaimWithoutOpeningTown()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.002"/>
+  <testcase name="rankDefaultsToOutsider_thenCanBeUpdated()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.001"/>
+  <testcase name="plotDeny_overridesTrust()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.002"/>
+  <testcase name="invitations_canBeSent_andAccepted()" classname="dev.voidpulsar.lc_claim_economy.town.TownRegistryDataTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
